@@ -8,7 +8,7 @@ const ScanList = () => {
         fetch('http://localhost:5000/api/scans')
         .then(response => response.json())
         .then(data => {
-            // console.log("data",data);
+            console.log("data",data);
             setScans(data)})
         .catch(error => console.error('error fetching', error));
         }, []);
@@ -19,7 +19,7 @@ const ScanList = () => {
   return (
 
     <div>
-        <h1>Stock Market ScanList</h1>
+        <h2>Stock Market ScanList</h2>
         {scans.map(scan => (
             <ScanItem key = {scan.id} scan={scan}/>
             ))}

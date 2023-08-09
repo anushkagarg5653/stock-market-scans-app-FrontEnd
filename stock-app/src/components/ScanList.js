@@ -8,12 +8,12 @@ const ScanList = () => {
         fetch('http://localhost:5000/api/scans')
         .then(response => response.json())
         .then(data => {
-            console.log("data",data);
+            // console.log("data",data);
             setScans(data)})
         .catch(error => console.error('error fetching', error));
         }, []);
 
-        if(scans.length ===0){
+        if(scans.length === 0){
             return <p>Loading...</p>
         }
   return (
